@@ -1,0 +1,5 @@
+UPDATE public."order_business_type_link" SET
+		"created_at" = '{{update_form.fieldState.created_at.isVisible ? update_form.formData.created_at : update_form.sourceData.created_at}}',
+    "order_id" = '{{update_form.fieldState.order_id.isVisible ? update_form.formData.order_id : update_form.sourceData.order_id}}',
+		"business_type_id" = '{{update_form.fieldState.business_type_id.isVisible ? update_form.formData.business_type_id : update_form.sourceData.business_type_id}}'
+WHERE "id" = {{data_table.selectedRow.id}};
